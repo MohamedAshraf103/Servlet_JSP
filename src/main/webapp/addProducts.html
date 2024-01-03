@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/Circle-icons-dolly.svg.png">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CURDS</title>
+<script type="text/javascript">
+	function Redirect() {
+		location.href = "ShowProducts";
+	}
+</script>
+</head>
+<body>
+	<form action="AddProductServlet" method="POST">
+		<div class="container py-4">
+			<label for="ProductName">ProductName:</label> <input type="text"
+				class="form-control mb-3" id="ProductName" name="name"> <label
+				for="ProductPrice">ProductPrice:</label> <input type="number"
+				class="form-control mb-3" id="ProductPrice" name="price"> <label
+				for="ProductCategory">ProductCategory:</label> <input type="text"
+				class="form-control mb-3" id="ProductCategory" name="category">
+
+			<label for="ProductDescribtion">ProductDescribtion:</label>
+			<textarea type="text" class="form-control mb-3"
+				id="ProductDescribtion" name="describtion"></textarea>
+
+			<input type="submit" value="Add Product"
+				class="btn w-100 d-block btn-outline-info" />
+		</div>
+	</form>
+	<button id="showBtn" onclick="Redirect()"
+		class="btn w-100  mt-2 d-block btn-outline-success" type="submit">Show Product</button>
+	</table>
+	</div>
+
+</body>
+</html>

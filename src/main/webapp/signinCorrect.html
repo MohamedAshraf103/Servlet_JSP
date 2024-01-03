@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <link rel="stylesheet" href="css/signinCorrect.css" id="stylesheet">
+</head>
+
+<body>
+  
+   
+    <section class="slice py-7">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                    <figure class="w-100">
+                        <img alt="Image placeholder" src="images/illustration-3.svg" class="img-fluid mw-md-120">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
+                    <h1 class="display-4 text-center text-md-left mb-3">
+                       Hello <strong class="text-primary"></strong>
+                    </h1>
+                    <p class="lead text-center text-md-left text-muted">
+                        Welcome to our website, we wish you a pleasant and useful experience!                    </p>
+                  
+                    <!-- Buttons -->
+                    <div class="text-center text-md-left mt-5">
+                        <a href="addProducts.html" class="btn btn-primary btn-icon" target="_blank">
+                            <span class="btn-inner--text">Add Product</span>
+                            <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <form action="ShowProducts" method="get" style="display:inline;">
+                        <input type="submit" value="Show Products" class="btn btn-neutral btn-icon d-none d-lg-inline-block">
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+</body>
+
+</html>
