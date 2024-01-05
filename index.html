@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login System</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="shortcut icon" type="image/icon" href="images/icon.png"/>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css.map">
+    <link rel="stylesheet" href="css/log_style.css">
+
+</head>
+ <body>
+    <div class="main">
+    <!-- Sing in  Form -->
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                    <a href="signup.html" class="signup-image-link">Create an account</a>
+                </div>
+
+                <div class="signin-form">
+                    <h2 class="form-title">Sign in</h2>
+                    <form method="POST" action="LoginServlet" class="register-form" id="login-form">
+                        <div class="form-group" >
+                            <label for="signEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="email" id="signEmail" placeholder="Your E-mail"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="signPass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="password" id="signPass" placeholder="Password"/>
+                        </div>
+                      
+                        <div class="form-group">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                            <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                        </div>
+                        <div id="result-sign">
+                            <span></span>
+                        <input type= "submit" value="Login" class="btn btn-outline-info text-decoration-none"/>
+
+                    </div>
+                    </form>
+                    <div class="social-login">
+                        <span class="social-label">For Contact</span>
+                        <ul class="socials">
+                            <li><a href="https://www.facebook.com/profile.php?id=100007099003753&mibextid=LQQJ4d"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                            <li><a href="mailto:mohamed.ashraf.ibrahim99@gmail.com"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    </div>
+   
+
+ </body>
+
+
+</html>
